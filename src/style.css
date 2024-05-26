@@ -1,4 +1,227 @@
+:root {
+    --background-color: #1C1C1C;
+    --matte-color: #23252C;
+    --matte-max-width: 22rem;
+    --card-color: #1A1B21;
+    --primary-accent-color: #F3BF99;
+    --secondary-accent-color: #918E9B;
+
+    --highlight-color: #5093E2;
+
+    --font-title-color: #F5F5F5;
+    --font-text-color:#DCDCDC;
+
+    --footer-background-color: #161619;
+    --footer-icon-color: #918E94;
+}
+
 * {
     box-sizing: border-box;
-    background-color: steelblue;
+    font-family: 'Inter', Arial, Helvetica, sans-serif
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    background-color: var(--background-color);
+    justify-content: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.matte {
+    background-color: var(--matte-color);
+    border-radius: .5em;
+    margin: 3rem;
+    padding: 2em 4em;
+    max-width: var(--matte-max-width);
+    height: fit-content;    
+}
+
+.card {
+    background-color: var(--card-color);
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    
+    img {        
+        width: 100%;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+        width: 100%;
+        height: 1.5em;
+
+        a {
+            border-radius: 5px;
+            width: 40%;
+            font-size: .7em;
+            align-content: center;
+            text-align: center;
+            text-decoration: none;
+    
+            span {
+                padding-left: .4em;
+            }
+        }
+    }
+    
+    .info--name {
+        color: var(--font-title-color);
+        margin: 1rem 0 0 0;
+        font-size: 1.2em;
+    }
+
+    .info--job_title {
+        color: var(--primary-accent-color);
+        font-weight: normal;
+        font-size: 0.7em;
+        margin: 0.2rem 0 0 0;
+    }
+
+    .info--website_button {
+        border: solid #0000 1px;
+        display: flex;
+        cursor: pointer;
+        margin: .5rem 0 .7rem 0;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        height: 1.5em;
+
+        .text {
+            color: var(--font-title-color);
+            font-size: 0.5em;
+            text-decoration: none;
+        }
+    }
+
+    .info--website_button:hover {
+        border-color: var(--primary-accent-color);
+        border-radius: 5px;        
+        transition: .25s;
+
+        .text {
+            color: var(--primary-accent-color);
+        }
+    }
+
+    .info--email_button {
+        background-color: var(--font-title-color);
+        color: var(--card-color);
+        transition: 0.25s;
+    }
+
+    .info--email_button:hover {
+        background-color: var(--highlight-color);
+        color: var(--font-title-color);
+        transition: 0.25s;
+    }
+    
+    .info--linkedin_button {
+        background-color: var(--font-title-color);
+        color: var(--highlight-color);
+        transition: 0.25s;
+    }
+
+    .info--linkedin_button:hover {
+        background-color: var(--highlight-color);
+        color: var(--font-title-color);
+        transition: 0.25s;
+    }    
+}
+
+.about {
+    margin: 1.5rem 1.5rem;
+
+    .about--title {
+        margin: 0;
+        color: var(--font-title-color);
+    }
+
+    .about--divider {
+        border: solid 1px var(--primary-accent-color);
+        width: 3rem;
+        margin: 2px 0 0 0;
+        transition: 0.5s;
+    }    
+
+    .about--description {
+        margin: .3rem 0;
+        color: var(--font-text-color);
+        font-size: .6em;
+        line-height: 1.5em;
+    }
+}
+
+.about:hover {
+    .about--divider {
+        width: 100%;
+        transition: 0.5s;
+    }
+}
+
+.interests {
+    margin: 1.5rem 1.5rem;
+
+    .interests--title {
+        margin: 0;
+        color: var(--font-title-color);
+    }
+
+    .interests--divider {
+        border: solid 1px var(--primary-accent-color);
+        width: 4.4rem;
+        transition: 0.5s;
+        margin: 2px 0 0 0;
+    }
+
+    .interests--description {
+        margin: .3rem 0;
+        color: var(--font-text-color);
+        font-size: .6em;
+        line-height: 1.5em;
+    }
+}
+
+.interests:hover {
+    .interests--divider {
+        width: 100%;
+        transition: 0.5s;
+    }
+}
+
+footer {
+    height: 60px;
+    background-color: var(--footer-background-color);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        height: 100%;
+
+        i {
+            font-size: 1.5em;
+            color: var(--footer-icon-color);
+            transition: 0.25s;
+        }
+    
+        i:hover {        
+            color: var(--highlight-color);
+            transition: 0.25s;
+        }
+    }
 }

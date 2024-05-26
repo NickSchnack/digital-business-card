@@ -1,15 +1,9 @@
-import Info from './components/Info';
-import About from './components/About';
-import Interests from './components/Interests';
-import Footer from './components/Footer';
+import Matte from 'src/components/Matte';
 
 export default function App() {
     return (
         <>
-            <Info />
-            <About />
-            <Interests />
-            <Footer />
+            <Matte />
         </>
     );
 }
